@@ -61,7 +61,7 @@ const loginUser = async (req, res) => {
     res.cookie('token', token, {
       httpOnly: true,
       sameSite: 'none',
-      secure: true
+      secure: true,
     })
 
     return res.status(200).send(isValidated)
@@ -99,13 +99,13 @@ const getUser = async (req, res) => {
  */
 const logoutUser = async (req, res) => {
   // res.clearCookie('token')
-  res.cookie('token', "", {
-      httpOnly: true,
-      sameSite: 'none',
-      secure: true,
-      expire: -3600
-    })
-    res.set("Cache-Control", "no-store")
+  res.cookie('token', '', {
+    httpOnly: true,
+    sameSite: 'none',
+    secure: true,
+    expire: -3600,
+  })
+  res.set('Cache-Control', 'no-store')
   res.status(200).send('User logged out Successfully')
 }
 
