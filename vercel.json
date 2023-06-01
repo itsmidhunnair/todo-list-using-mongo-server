@@ -1,16 +1,5 @@
 {
   "version": 2,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "private"
-        }
-      ]
-    }
-  ],
   "builds": [
     {
       "src": "index.js",
