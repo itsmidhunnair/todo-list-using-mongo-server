@@ -12,6 +12,7 @@ const port = process.env.SERVER_PORT
 // These Cors Config is must for HTTP only
 const corsOptions = {
   origin: 'https://todo-list-using-mongo-frontend.vercel.app',
+  // origin: 'http://localhost:3000',
   credentials: true,
 }
 
