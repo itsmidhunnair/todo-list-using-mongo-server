@@ -105,6 +105,7 @@ const logoutUser = async (req, res) => {
       secure: true,
       expire: -3600
     })
+    res.set("Cache-Control", "no-store")
   res.status(200).send('User logged out Successfully')
 }
 
