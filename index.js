@@ -15,6 +15,7 @@ const corsOptions = {
   credentials: true,
 }
 
+app.set('etag', false)
 app.use(cors(corsOptions))
 app.use(express.json())
 
