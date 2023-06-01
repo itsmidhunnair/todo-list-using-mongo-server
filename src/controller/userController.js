@@ -60,7 +60,7 @@ const loginUser = async (req, res) => {
     const token = encodeToken(isValidated)
     res.cookie('token', token, {
       httpOnly: true,
-      // sameSite: 'strict',
+      sameSite: 'none',
     })
 
     return res.status(200).send(isValidated)
