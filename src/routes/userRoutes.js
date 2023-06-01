@@ -20,6 +20,6 @@ userRouter.get('/verify', verifyUser)
 
 userRouter.get('/getuser', getUser)
 
-userRouter.get('/logout', logoutUser)
+userRouter.post('/logout', logoutUser)
 
 module.exports = userRouter
