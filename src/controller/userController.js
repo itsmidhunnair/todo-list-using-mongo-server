@@ -98,7 +98,8 @@ const getUser = async (req, res) => {
  * for getting User Data
  */
 const logoutUser = async (req, res) => {
-  res.clearCookie('token')
+  // res.clearCookie('token')
+  res.clearCookie()
   res.status(200).send('User logged out Successfully')
 }
 
